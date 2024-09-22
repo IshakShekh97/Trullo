@@ -64,7 +64,7 @@ export const FormPicker = ({ id, errors }: FormPickerProps) => {
             key={image.id}
             className={cn(
               "cursor-pointer relative aspect-video group hover:opacity-75 transition-all bg-muted",
-              pending && "opacity-50 hover:opacity-50 cursor-auto",
+              pending && "opacity-50 hover:opacity-50 cursor-auto"
             )}
             onClick={() => {
               if (pending) return;
@@ -104,7 +104,10 @@ export const FormPicker = ({ id, errors }: FormPickerProps) => {
         ))}
       </div>
 
-      <FormErrors id="image" errors={errors} />
+      <FormErrors
+        id="image"
+        errors={errors as Record<string, string[] | undefined>}
+      />
     </div>
   );
 };

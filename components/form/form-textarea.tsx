@@ -68,7 +68,10 @@ export const FormTextarea = forwardRef<HTMLTextAreaElement, FormTextAreaProps>(
           />
         </div>
 
-        <FormErrors id={id} errors={errors} />
+        <FormErrors
+          id={id}
+          errors={errors as Record<string, string[] | undefined>}
+        />
       </div>
     );
   }

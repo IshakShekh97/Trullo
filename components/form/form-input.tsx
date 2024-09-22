@@ -34,7 +34,7 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
       defaultValue = "",
       onBlur,
     },
-    ref,
+    ref
   ) => {
     const { pending } = useFormStatus();
 
@@ -61,10 +61,13 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
           />
         </div>
 
-        <FormErrors id={id} errors={errors} />
+        <FormErrors
+          id={id}
+          errors={errors as Record<string, string[] | undefined>}
+        />
       </div>
     );
-  },
+  }
 );
 
 FormInput.displayName = "FormInput";
