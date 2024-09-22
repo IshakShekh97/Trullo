@@ -89,7 +89,7 @@ export const Description = ({ data }: DescriptionProps) => {
           <form action={onSubmit} ref={formRef} className="space-y-2">
             <FormTextarea
               ref={textAreaRef}
-              errors={fieldErrors}
+              errors={fieldErrors as Record<string, string[] | undefined>}
               id="description"
               className="w-full mt-2 bg-secondary"
               placeholder="Add a more detailed description..."

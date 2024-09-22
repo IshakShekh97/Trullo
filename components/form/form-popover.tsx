@@ -84,10 +84,13 @@ export const FormPopover = ({
 
         <form action={onSumbit} className="space-y-4">
           <div className="space-y-4">
-            <FormPicker id="image" errors={fieldErrors} />
+            <FormPicker
+              id="image"
+              errors={fieldErrors as Record<string, string[] | undefined>}
+            />
 
             <FormInput
-              errors={fieldErrors}
+              errors={fieldErrors as Record<string, string[] | undefined>}
               id="title"
               label="Board Title"
               type="text"

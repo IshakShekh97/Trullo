@@ -81,7 +81,7 @@ export const ListForm = () => {
         >
           <FormInput
             id="title"
-            errors={fieldErrors}
+            errors={fieldErrors as Record<string, string[] | undefined>}
             ref={inputRef}
             className="text-sm px-2 py-1 h-7 font-medium border-transparent hover:border-input focus:border-input transition-all"
             placeholder="Enter list title..."

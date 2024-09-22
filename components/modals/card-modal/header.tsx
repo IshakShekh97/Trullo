@@ -70,7 +70,7 @@ export const Header = ({ data }: HeaderProps) => {
       <div className="w-full">
         <form action={onSubmit}>
           <FormInput
-            errors={fieldErrors}
+            errors={fieldErrors as Record<string, string[] | undefined>}
             ref={inputRef}
             onBlur={onBlur}
             id="title"
