@@ -77,10 +77,10 @@ export const CardForm = forwardRef<HTMLTextAreaElement, CardFormProps>(
         >
           <FormTextarea
             id="title"
-            onKeyDown={onTextareakeyDown}
+            onkeyDown={onTextareakeyDown}
             ref={ref}
             placeholder="Enter a title for this card"
-            errors={fieldErrors}
+            errors={fieldErrors as Record<string, string[] | undefined>}
           />
           <input hidden id="listid" name="listId" value={listId} />
           <div className="flex items-center gap-x-1">
