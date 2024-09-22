@@ -77,7 +77,7 @@ export const CardForm = forwardRef<HTMLTextAreaElement, CardFormProps>(
         >
           <FormTextarea
             id="title"
-            onkeyDown={onTextareakeyDown}
+            onKeyDown={onTextareakeyDown}
             ref={ref}
             placeholder="Enter a title for this card"
             errors={fieldErrors}
